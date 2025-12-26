@@ -10,29 +10,54 @@ import {
 
 const faq = [
   {
-    question: "What is SaasCN?",
+    question: "Apa itu LUXIMA.ID?",
     answer:
-      "SaasCN is a comprehensive business operations platform that helps companies streamline their workflows, automate processes, and scale efficiently. Our solutions are designed for businesses of all sizes.",
+      "LUXIMA.ID adalah platform wedding & teknologi yang menghubungkan calon pengantin dengan vendor wedding terpercaya, sekaligus membantu vendor mengembangkan bisnis secara profesional melalui sistem dan teknologi digital.",
   },
   {
-    question: "How secure is the platform?",
+    question: "Apakah LUXIMA.ID hanya untuk wedding?",
     answer:
-      "We implement enterprise-grade security measures, including end-to-end encryption, regular security audits, and compliance with industry standards. Your data security is our top priority.",
+      "Fokus utama kami adalah industri wedding, namun layanan fotografi, sistem, dan teknologi kami juga dapat digunakan untuk kebutuhan bisnis lain.",
   },
   {
-    question: "Can I integrate with other tools?",
+    question: "Apakah semua vendor di LUXIMA.ID terpercaya?",
     answer:
-      "Yes! SaasCN offers extensive integration capabilities with popular business tools and services. Our API and webhook system allows for seamless connection with your existing tech stack.",
+      "Vendor yang terdaftar melalui proses kurasi dan verifikasi dasar untuk memastikan kualitas dan profesionalisme.",
   },
   {
-    question: "How does pricing work?",
+    question: "Apakah saya bisa membandingkan beberapa vendor sekaligus?",
     answer:
-      "We offer flexible pricing tiers designed to scale with your business needs, from starter plans for small teams to enterprise solutions for large organizations. Check our pricing page for detailed information.",
+      "Ya. Anda dapat melihat profil, portofolio, dan informasi vendor untuk membantu pengambilan keputusan.",
   },
   {
-    question: "What kind of support do you provide?",
+    question: "Apakah menggunakan LUXIMA.ID berbayar untuk pengantin?",
     answer:
-      "Our dedicated support team is available 24/7 through multiple channels including live chat, email, and phone. We also provide extensive documentation and training resources.",
+      "Tidak. Pencarian vendor untuk calon pengantin gratis.",
+  },
+  {
+    question: "Siapa saja yang bisa menjadi vendor di LUXIMA.ID?",
+    answer:
+      "Fotografer, videografer, MUA, wedding organizer, dekorasi, florist, catering, venue, dan vendor wedding lainnya.",
+  },
+  {
+    question: "Apakah ada biaya pendaftaran vendor?",
+    answer:
+      "Kami menyediakan paket Gratis (Basic) serta paket berbayar sesuai kebutuhan pengembangan bisnis.",
+  },
+  {
+    question: "Apakah LUXIMA.ID membantu promosi vendor?",
+    answer:
+      "Ya. Vendor akan mendapatkan exposure melalui platform, SEO (Search Engine Optimization), dan fitur promosi sesuai paket.",
+  },
+  {
+    question: "Apakah tersedia sistem manajemen vendor?",
+    answer:
+      "Fitur sistem manajemen sedang dikembangkan dan akan tersedia bertahap.",
+  },
+  {
+    question: "Bagaimana cara bergabung dengan LUXIMA.ID?",
+    answer:
+      "Silakan hubungi tim kami untuk informasi lebih lanjut. Anda dapat menghubungi tim kami melalui email, telepon, atau mengunjungi website kami.",
   },
 ];
 

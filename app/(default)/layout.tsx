@@ -5,7 +5,7 @@ import {
   NavbarActions,
   NavbarMenu,
 } from "@/components/sections/navbar";
-import { NavbarMobile } from "@/components/sections/navbar/navbar-mobile";
+
 import { ReactNode } from "react";
 
 const Layout = ({ children }: { children: ReactNode }) => {

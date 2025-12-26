@@ -30,33 +30,33 @@ const features = [
   {
     id: 1,
     Icon: HandCoinsIcon,
-    title: "Cost-Effective Solutions",
+    title: "Spesialis Wedding & Teknologi",
     description:
-      "Maximize ROI with our affordable business automation solutions that scale with your needs.",
+      "Kami sangat paham dengan kebutuhan calon pengantin maupun vendor wedding dalam hal wedding dan teknologi.",
     size: "lg",
   },
   {
     id: 2,
     Icon: BarChartIcon,
-    title: "Advanced Analytics",
+    title: "Bukan Sekadar Listing",
     description:
-      "Get deep insights into your business performance with comprehensive analytics and reporting tools.",
+      "Kami membangun ekosistem bisnis, bukan hanya direktori vendor. Kami juga ingin integrasi sistem dan bisnis secara digital.",
     size: "sm",
   },
   {
     id: 3,
     Icon: UsersIcon,
-    title: "Team Collaboration",
+    title: "Siap Scale & Bertumbuh",
     description:
-      "Work seamlessly with your team through integrated collaboration features and real-time updates.",
+      "Sistem kami dirancang untuk kebutuhan hari ini dan masa depan. Berdasarkan data dan pengalaman kami, kami siap untuk menghadapi kemajuan teknologi.",
     size: "sm",
   },
   {
     id: 4,
     Icon: IntegrationsIcon,
-    title: "Easy Integration",
+    title: "Partner Jangka Panjang",
     description:
-      "Connect with your favorite tools and services through our extensive integration ecosystem.",
+      "Fokus kami bukan transaksi satu kali, tapi pertumbuhan berkelanjutan. Kami membangun jaringan partner jangka panjang untuk memastikan kebutuhan calon pengantin dan vendor wedding tetap terpenuhi.",
     size: "lg",
   },
 ];
@@ -75,11 +75,11 @@ const Features = () => (
       >
         <div className="flex flex-col gap-2 px-6">
           <h2 className="max-w-xl text-left font-regular text-3xl tracking-tighter md:text-5xl">
-            Why SaasCN?
+            Why us?
           </h2>
-          <p className="max-w-xl text-left text-lg text-muted-foreground leading-relaxed tracking-tight lg:max-w-lg">
-            Powerful features to help your business succeed in today's
-            competitive landscape.
+          <p className="max-w-xl text-left font-light text-muted-foreground leading-relaxed tracking-tight lg:max-w-lg">
+             Kami membantu calon pengantin menemukan vendor wedding terbaik sekaligus membantu vendor
+             wedding tumbuh melalui teknologi, sistem, dan strategi digital. 
           </p>
         </div>
       </InView>
@@ -98,7 +98,7 @@ const Features = () => (
                 <h3 className="text-xl tracking-tight transition-all">
                   {feature.title}
                 </h3>
-                <p className="max-w-xs text-base text-muted-foreground transition-all">
+                <p className="max-w-xs text-base font-light tracking-tight text-muted-foreground transition-all">
                   {feature.description}
                 </p>
               </div>

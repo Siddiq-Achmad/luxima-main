@@ -15,11 +15,13 @@ const PlusJakartaSans = Plus_Jakarta_Sans({
 
 
 export const metadata: Metadata = {
-  title: { 
-    default: "LUXIMA.ID",
-    template: "%s | LUXIMA.ID",
+  title: {
+    template:
+      "%s - LUXIMA.ID | Creative Studio, Studio Photography, Web Dev & Digital Marketing",
+    default: "LUXIMA.ID | Wedding Industry, Photography, Pengembangan Teknologi & Bisnis Digital",
   },
-  description: "Main Website for LUXIMA.ID",
+  description:
+    "LUXIMA.ID | Wedding Industry, Photography, Pengembangan Teknologi & Bisnis Digital. Mulai Bangun Bisnis Wedding yang Lebih Profesional",
 };
 
 export default function RootLayout({

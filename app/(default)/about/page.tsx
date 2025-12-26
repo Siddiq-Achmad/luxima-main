@@ -6,6 +6,7 @@ import Hero from './_components/hero';
 import Team from './_components/team';
 import Updates from './_components/updates';
 import TeamSection from './_components/team-member';
+import Vision from './_components/vision';
 
 export default function AboutPage() {
   const posts = [
@@ -76,6 +77,8 @@ export default function AboutPage() {
       <Hero />
       <Separator />
       <About />
+      <Separator />
+      <Vision />
       <Separator />
       <Team />
       <TeamSection members={members} />

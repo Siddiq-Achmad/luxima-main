@@ -17,7 +17,7 @@ export default function CTA(): React.ReactElement {
         transition={{ duration: 0.3, ease: "easeInOut", delay: 0.2 }}
       >
         <h2 className="max-w-xl font-regular text-3xl md:text-5xl">
-          Transform Your Business with SaasCN
+          Transform Your Business with LUXIMA.ID
         </h2>
       </InView>
 
@@ -31,10 +31,10 @@ export default function CTA(): React.ReactElement {
             viewOptions={{ margin: "0px 0px -200px 0px" }}
             transition={{ duration: 0.3, ease: "easeInOut", delay: 0.4 }}
           >
-            <p className="text-muted-foreground text-sm md:text-base">
-              Join thousands of businesses that use SaasCN to streamline
-              operations, boost productivity, and drive growth. Start your
-              journey today.
+            <p className="text-muted-foreground text-sm font-light md:text-base">
+              Bergabung bersama kami untuk membantu bisnis Anda menjadi lebih
+              produktif dan berkembang. Dengan LUXIMA.ID, Anda dapat mengakses
+              berbagai layanan yang dapat mempermudah urusan bisnis Anda.
             </p>
           </InView>
           <InView

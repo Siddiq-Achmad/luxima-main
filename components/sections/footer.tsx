@@ -3,7 +3,7 @@
 import Link from 'next/link'
 import { motion } from 'motion/react'
 import { cn } from '@/lib/utils'
-import { Call02Icon, Facebook01Icon, InstagramIcon, Mail02Icon, MapPinpoint02Icon, NewTwitterRectangleIcon, TiktokIcon, YoutubeIcon } from '@hugeicons/core-free-icons'
+import { Call02Icon, Facebook01Icon, InstagramIcon, Mail02Icon, MapPinpoint02Icon, NewTwitterRectangleIcon, TiktokIcon, WhatsappBusinessIcon, YoutubeIcon } from '@hugeicons/core-free-icons'
 import { HugeiconsIcon } from '@hugeicons/react'
 import { LoaderPinwheelIcon } from '../ui/loader-pinwheel'
 
@@ -30,11 +30,12 @@ const Footer = () => {
   ]
 
   const socialLinks = [
-    { icon: Facebook01Icon, href: '#', label: 'Facebook' },
-    { icon: InstagramIcon, href: '#', label: 'Instagram' },
-    { icon: TiktokIcon, href: '#', label: 'Tiktok' },
-    { icon: NewTwitterRectangleIcon, href: '#', label: 'X' },
-    { icon: YoutubeIcon, href: '#', label: 'Youtube' },
+    { icon: Facebook01Icon, href: 'https://facebook.com/luxima.photo', label: 'Facebook' },
+    { icon: InstagramIcon, href: 'https://instagram.com/luxima.id', label: 'Instagram' },
+    { icon: TiktokIcon, href: 'https://tiktok.com/@luxima.id', label: 'Tiktok' },
+    { icon: NewTwitterRectangleIcon, href: 'https://twitter.com/luximaid', label: 'X' },
+    { icon: YoutubeIcon, href: 'https://www.youtube.com/@luxima-id', label: 'Youtube' },
+    { icon: WhatsappBusinessIcon, href: 'https://wa.me/628990001664', label: 'Whatsapp' },
   ]
 
   return (
@@ -55,8 +56,8 @@ const Footer = () => {
               </div>
               <span className="text-xl font-mono text-primary">LUXIMA.ID</span>
             </div>
-            <p className="text-sm text-muted-foreground mb-4">
-              Creative Studio yang bergerak dalam bidang industri kreatif, photography, digital marketing, web development & technology.
+            <p className="text-sm font-light tracking-tight text-muted-foreground mb-4">
+              Wedding Platform Digital & Pengembangan Bisnis Berbasis Teknologi. Creative Studio, Photography, Web Dev & Digital Marketing
             </p>
             <div className="space-y-2 text-sm text-muted-foreground">
               <div className="flex items-center space-x-2">
@@ -72,7 +73,10 @@ const Footer = () => {
               <div className="flex items-center space-x-2">
                 {/* <Phone className="h-4 w-4 text-primary" /> */}
                 <HugeiconsIcon icon={Call02Icon} className="h-4 w-4 text-primary" />
-                <span>+62 899 0001 664</span>
+                <Link href="https://wa.me/628990001664" target="_blank" rel="noopener noreferrer">
+                
+                +62 899 0001 664
+                </Link>
               </div>
             </div>
           </motion.div>

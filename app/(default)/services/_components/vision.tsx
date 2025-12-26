@@ -1,14 +1,9 @@
 import { InView } from "@/components/in-view";
 import { Section } from "@/components/section";
 
-export default function About(): React.ReactElement {
+export default function Vision(): React.ReactElement {
   return (
     <Section className="grid divide-y divide-dashed divide-border lg:grid-cols-2 lg:divide-x lg:divide-y-0">
-      <div className="flex flex-col gap-2 px-6 py-10 md:py-14">
-        <h4 className="text-left font-regular text-3xl tracking-tighter md:text-5xl">
-          Our Story
-        </h4>
-      </div>
 
       <div className="gap-4 px-6 py-10 md:py-14">
         <InView
@@ -21,19 +16,29 @@ export default function About(): React.ReactElement {
         >
           <div className="prose dark:prose-invert w-full space-y-4">
             <p className="text-base font-light tracking-tight text-muted-foreground">
-              Berawal dari dunia fotografi wedding dan industri kreatif. Kami
-              melihat banyak vendor wedding memiliki kualitas layanan yang
-              sangat baik, namun belum didukung oleh sistem digital dan
-              teknologi yang optimal.
+              Membantu calon pengantin menemukan vendor wedding terbaik
+              sekaligus membantu vendor wedding tumbuh melalui teknologi,
+              sistem, dan strategi digital.
+            </p>
+            <p className="text-base font-light tracking-tight text-muted-foreground">
+              Menjadi ekosistem wedding & teknologi yang membantu vendor dan
+              bisnis kreatif tumbuh secara berkelanjutan.
             </p>
 
-            <p className="text-base font-light tracking-tight text-muted-foreground">
-              Dari pengalaman tersebut, kami membangun LUXIMA.ID sebagai
-              platform wedding listing & pengembangan bisnis berbasis teknologi.
+            <p className="text-base font-light tracking-tight text-muted-foreground ">
+              Kami ingin menjadi platform digital yang memudahkan vendor wedding
+              dan industri kreatif dalam menjalankan bisnis mereka.
             </p>
           </div>
         </InView>
       </div>
+      <div className="flex flex-col gap-2 px-6 py-10 md:py-14 items-end mr-4">
+        <h4 className="text-left font-regular text-3xl tracking-tighter md:text-5xl">
+          Our Vision
+        </h4>
+      </div>
+
+      
     </Section>
   );
 }

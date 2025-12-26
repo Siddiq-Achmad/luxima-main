@@ -16,20 +16,13 @@ const Hero = () => (
        whileInView={{ opacity: 1 }}
        viewport={{ once: true }}
        className='flex flex-col items-center gap-6 text-center'>
-        <Image
-          src={'/icon.png'}
-          alt='Hero Background'
-          height={200}
-          width={200}
-          priority
-          className='transition-transform hover:scale-110'
-        />
+        
         <h1 className='max-w-2xl bg-gradient-to-b bg-opacity-50 from-foreground to-muted-foreground/70 bg-clip-text font-regular text-4xl text-transparent tracking-tighter sm:text-6xl md:text-7xl'>
-          <Balancer>Wedding Platform & Digital Bisnis</Balancer>
+          <Balancer>Services </Balancer>
         </h1>
         <p className='mx-auto max-w-2xl text-lg font-light tracking-tight text-muted-foreground/90 md:text-xl'>
           <Balancer>
-            Bukan hanya platform wedding, tapi partner pertumbuhan bisnis berbasis teknologi
+            Kami menyediakan berbagai layanan wedding dan digital bisnis
           </Balancer>
         </p>
       </motion.div>

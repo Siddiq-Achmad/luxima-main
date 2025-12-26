@@ -8,6 +8,7 @@ export type NavLinkItem = {
 export const navLinks: NavLinkItem[] = [
   { href: '/', label: 'Home', description: 'Home' },
   { href: '/about', label: 'About Us', description: 'About Us' },
+  { href: '/work', label: 'Work', description: 'Work' },
   {
     href: '/services',
     label: 'Services',
@@ -23,7 +24,6 @@ export const navLinks: NavLinkItem[] = [
       { href: '/services/sistem-informasi', label: 'Sistem Informasi' },
     ],
   },
-  { href: '/gallery', label: 'Gallery' },
   {
     href: '/blog',
     label: 'Blog',
@@ -34,14 +34,5 @@ export const navLinks: NavLinkItem[] = [
       { href: '/categories', label: 'Categories' },
     ],
   },
-  { href: '/contact', label: 'Contact' },
-]
-
-export const navLinks2: NavLinkItem[] = [
-  { href: '/', label: 'Home' },
-  { href: '/about', label: 'About Us' },
-  { href: '/services', label: 'Services' },
-  { href: '/gallery', label: 'Gallery' },
-  { href: '/blog', label: 'Blog' },
   { href: '/contact', label: 'Contact' },
 ]

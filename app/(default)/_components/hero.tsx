@@ -69,10 +69,8 @@ const Hero = () => (
           <br />
           Business Starts Here
         </h1>
-        <p className="max-w-2xl text-center text-lg text-muted-foreground leading-relaxed tracking-tight md:text-xl">
-          Say goodbye to manual workflows and inefficient processes. SaasCN
-          streamlines your business operations, making work intuitive,
-          efficient, and tailored to your needs.
+        <p className="max-w-2xl text-center text-lg font-light  text-muted-foreground leading-relaxed tracking-tight md:text-xl">
+          Platform untuk Wedding Industry & Pertumbuhan Bisnis Digital
         </p>
       </motion.div>
       <motion.div

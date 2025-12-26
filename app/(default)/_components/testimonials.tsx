@@ -14,36 +14,36 @@ import { useEffect, useState } from "react";
 
 const testimonials = [
   {
-    title: "Transformed our workflow",
+    title: "Transformasi Digital",
     description:
-      "SaasCN has completely revolutionized how we handle our business processes. The automation features alone have saved us countless hours.",
+      "Tidak hanya fotografi, LUXIMA membantu kami berpikir bisnis dan sistem.",
     author: {
       name: "Hayden Bleasel",
       image: "https://github.com/haydenbleasel.png",
     },
   },
   {
-    title: "Enterprise-grade solution",
+    title: "Explosure yang lebih luas",
     description:
-      "The platform offers enterprise-level features while maintaining an intuitive interface. Perfect for scaling organizations.",
+      "Sejak bergabung dengan LUXIMA.ID, exposure vendor kami meningkat dan sistem bisnis kami menjadi lebih rapi.",
     author: {
       name: "Lee Robinson",
       image: "https://github.com/leerob.png",
     },
   },
   {
-    title: "Exceptional integration",
+    title: "Integrasi yang mudah",
     description:
-      "The ease of integration with our existing tools was impressive. It fits perfectly into our tech stack.",
+      "Integrasi sistem bisnis kami menjadi lebih mudah dan efisien. Terima kasih LUXIMA.ID.",
     author: {
       name: "shadcn",
       image: "https://github.com/shadcn.png",
     },
   },
   {
-    title: "Outstanding support",
+    title: "Pelayanan terbaik",
     description:
-      "Their customer support team goes above and beyond. Any questions we had were answered promptly and thoroughly.",
+      "Pelayanan keluhan kami ditanggapi dengan cepat dan profesional. Terima kasih LUXIMA.ID.",
     author: {
       name: "Pontus Abrahamsson",
       image: "https://github.com/pontusab.png",
@@ -107,7 +107,7 @@ const Testimonials = () => {
                   <div className="flex flex-col gap-4">
                     <div className="flex flex-col">
                       <h3 className="text-xl tracking-tight">{item.title}</h3>
-                      <p className="max-w-xs text-base text-muted-foreground">
+                      <p className="max-w-xs text-base font-light tracking-tight text-muted-foreground">
                         {item.description}
                       </p>
                     </div>

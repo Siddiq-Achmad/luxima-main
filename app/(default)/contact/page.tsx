@@ -5,6 +5,9 @@ import CTA from '../_components/cta';
 import { ContactForm } from './components/contact-form';
 import { InView } from '@/components/in-view';
 import * as motion from "motion/react-client";
+import Separator from '@/components/separator';
+import { HugeiconsIcon } from '@hugeicons/react';
+import { Call02Icon, Mail01Icon } from '@hugeicons/core-free-icons';
 
 export default function Contact(): React.ReactElement {
   return (
@@ -18,14 +21,30 @@ export default function Contact(): React.ReactElement {
               viewOptions={{ margin: "0px 0px -200px 0px" }}
               transition={{ duration: 0.2, ease: "easeInOut", delay: 0.2 }}
             >
-        <div className='flex flex-col gap-2 px-6 py-10 md:py-14'>
-          <h4 className='max-w-xl text-left font-regular text-3xl tracking-tighter md:text-5xl'>
+        <div className='flex flex-col justify-between gap-2 px-6 py-10 md:py-14 w-full h-full'>
+          <div className='px-4 py-6 gap-6'>
+          <h4 className='max-w-xl text-left font-regular text-3xl tracking-tighter md:text-5xl md:mb-4'>
             Contact
           </h4>
-          <p className='max-w-xl text-left text-lg text-muted-foreground leading-relaxed tracking-tight lg:max-w-lg'>
-            Let us know if you have any questions or feedback. We are here to
-            help you.
+          <p className='max-w-xl text-left font-light text-sm text-muted-foreground leading-relaxed tracking-tight lg:max-w-lg'>
+            Siap memulai perjalanan digital Anda di industri wedding? <br />
+            Diskusikan kebutuhan wedding, sistem, atau pengembangan bisnis Anda bersama tim kami.
           </p>
+          </div>
+          <div className='px-4 py-6 gap-4'>
+          <h4 className='max-w-xl text-left font-regular text-3xl tracking-tighter md:text-5xl md:mb-4'>
+            Let&apos;s Talk
+          </h4>
+          <div className='max-w-xl text-left text-sm font-light text-muted-foreground leading-relaxed tracking-tight lg:max-w-lg'>
+            Kami sangat senang untuk membantu Anda. <br />
+            Jangan ragu untuk menghubungi kami melalui email atau telepon.
+            <ul className='mt-2 gap-2'>
+              <li className='flex gap-2 items-center'><HugeiconsIcon icon={Mail01Icon}/><a href="mailto:admin@luxima.id">admin@luxima.id</a></li>
+              <li className='flex gap-2'><HugeiconsIcon icon={Call02Icon}/> <a href="https://wa.me/628990001664">+62 899 0001 664</a></li>
+
+            </ul>
+          </div>
+          </div>
         </div>
         </InView>
 
@@ -42,6 +61,7 @@ export default function Contact(): React.ReactElement {
           <ContactForm />
         </motion.div>
       </Section>
+      <Separator />
       <CTA />
     </>
   );

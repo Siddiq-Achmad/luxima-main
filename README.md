@@ -2,7 +2,34 @@
 
 ## Deskripsi Singkat
 
+
+
+Website utama LUXIMA.ID, sebuah startup yang bergerak di bidang Wedding Industry, Photography, serta Pengembangan Teknologi & Bisnis Digital.
+
+Project ini dibangun sebagai fondasi untuk:
+
+Company profile resmi LUXIMA.ID
+
+Website marketing dengan pendekatan conversion-oriented
+
+Platform Wedding Listing & Vendor Directory
+
+Media edukasi & akuisisi traffic melalui Blog (SEO-driven)
+
+Fondasi pengembangan SaaS & Vendor Ecosystem di masa depan
+
 Website utama **Luxima** yang dibangun menggunakan **Next.js 16 (App Router)** dengan fokus pada performa, skalabilitas, dan UI modern. Project ini menggunakan **Tailwind CSS v4**, **shadcn/ui**, serta terintegrasi dengan **Supabase** sebagai backend service.
+---
+
+##🎯 Fokus Pengembangan
+
+Website ini dirancang dan dioptimalkan untuk:
+
+- 🔍 SEO Wedding & Teknologi
+- 📈 Marketing & Conversion (CTA-driven)
+- 🤝 Akuisisi & onboarding Vendor Wedding
+- 💍 Akuisisi Calon Pengantin
+- 🚀 Pengembangan lanjutan ke arah SaaS Wedding Platform
 
 ---
 

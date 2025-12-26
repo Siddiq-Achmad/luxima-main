@@ -133,8 +133,6 @@
   }
 }
 
-
-
 @layer utilities {
   .bg-dashed {
     background-image: linear-gradient(
@@ -157,4 +155,9 @@
   .divide-border {
     @apply divide-border/70 dark:divide-border;
   }
+}
+
+::view-transition-old(root), ::view-transition-new(root) {
+    animation: none;
+    mix-blend-mode: normal;
 }
