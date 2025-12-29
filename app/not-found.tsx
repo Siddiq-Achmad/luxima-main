@@ -10,13 +10,16 @@ import {
 } from "@/components/ui/empty";
 import { motion } from "motion/react";
 import { HugeiconsIcon } from "@hugeicons/react";
-import { DiscoverSquareIcon, Home11Icon } from "@hugeicons/core-free-icons";
+import { ArrowTurnBackwardIcon, DiscoverSquareIcon } from "@hugeicons/core-free-icons";
 import Link from "next/link";
 
 const PRIMARY_ORB_HORIZONTAL_OFFSET = 40;
 const PRIMARY_ORB_VERTICAL_OFFSET = 20;
 
 export default function NotFound() {
+  const handleBack = () => {
+    window.history.back();
+  }
   return (
     <main className="flex flex-1">
       <div className="w-full relative flex min-h-screen items-center justify-center overflow-hidden bg-[radial-gradient(circle_at_center,rgba(99,102,241,0.1),transparent_70%)] text-[var(--foreground)]  mx-auto  border-border border-x border-b border-dashed ">
@@ -93,15 +96,15 @@ export default function NotFound() {
                 moved or doesn&apos;t exist.
               </p>
               <div className="flex gap-2">
-                <Button asChild>
-                  <Link href="/">
-                    <HugeiconsIcon icon={Home11Icon} className="mr-2 h-4 w-4" />{" "}
-                    Go Home
-                  </Link>
+                <Button onClick={handleBack}>
+                  
+                    <HugeiconsIcon icon={ArrowTurnBackwardIcon} className="mr-2 h-4 w-4" />{" "}
+                    Go Back
+                  
                 </Button>
 
-                <Button asChild variant="outline">
-                  <Link href="#">
+                <Button variant="outline" asChild>
+                  <Link href="/">
                     <HugeiconsIcon
                       icon={DiscoverSquareIcon}
                       className="mr-2 h-4 w-4"

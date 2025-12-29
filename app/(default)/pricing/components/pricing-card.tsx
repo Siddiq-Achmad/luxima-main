@@ -62,14 +62,14 @@ export function PricingCard({ tier, paymentFrequency }: PricingCardProps) {
           )}
         </div>
 
-        <h3 className='font-medium text-sm'>{tier.description}</h3>
+        <h3 className='font-light text-sm'>{tier.description}</h3>
       </div>
       <div className='flex-1 space-y-2 px-6'>
         <ul className='space-y-2'>
           {tier.features.map((feature, index) => (
             <li
               key={feature}
-              className={cn('flex items-center gap-2 text-base')}
+              className={cn('flex items-center gap-2 text-sm font-light')}
             >
               <div className='inline-flex size-5 items-center justify-center rounded-full border border-border bg-primary p-1 transition-transform hover:scale-125'>
                 <CheckIcon className='size-3 text-background' strokeWidth='4' />
@@ -80,13 +80,13 @@ export function PricingCard({ tier, paymentFrequency }: PricingCardProps) {
         </ul>
       </div>
 
-      <div className='flex flex-col gap-2 px-6'>
+      <div className='flex flex-col gap-2 px-6 '>
         <Link
           className={cn(
             buttonVariants({
               variant: isPopular ? 'default' : 'secondary',
             }),
-            'group w-full',
+            'group w-full h-12',
           )}
           href={tier.cta.href}
         >

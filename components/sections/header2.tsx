@@ -52,7 +52,7 @@ const Header = () => {
           
             <div className="w-8 h-8 bg-transparent flex items-center justify-center">
               {/* <span className="text-2xl text-primary-foreground font-semibold">L</span> */}
-              <LoaderPinwheelIcon />
+              <LoaderPinwheelIcon className='text-primary/40' />
             </div>
             <span className="text-2xl text-primary font-mono">LUXIMA.ID</span>
           </Link>

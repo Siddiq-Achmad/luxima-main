@@ -12,8 +12,8 @@ export const contact = actionClient
   .action(async ({ parsedInput: { name, email, message } }) => {
     try {
       const { data, error } = await resend.emails.send({
-        from: 'LUXIMA.ID <admin@luxima.id>',
-        to: email,
+        from: name ? `${name} <${email}>` : email,
+        to: [process.env.RESEND_FROM_EMAIL as string],
         subject: 'Contact Form Submission',
         text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`,
       });

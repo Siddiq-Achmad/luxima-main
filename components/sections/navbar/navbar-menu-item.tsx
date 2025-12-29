@@ -1,5 +1,5 @@
 'use client'
-
+import { DynamicIcon } from 'lucide-react/dynamic';
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import {
@@ -10,6 +10,11 @@ import {
 } from '@/components/ui/navigation-menu'
 import { cn } from '@/lib/utils'
 import type { NavLinkItem } from './nav-links'
+import { HugeiconsIcon } from '@hugeicons/react';
+import {  Menu09Icon, SecurityLockIcon } from '@hugeicons/core-free-icons'
+
+
+
 
 export function NavbarMenuItem({ item }: { item: NavLinkItem }) {
   const pathname = usePathname()
@@ -27,7 +32,7 @@ export function NavbarMenuItem({ item }: { item: NavLinkItem }) {
             href={item.href}
             className={cn(
               'block px-3 py-2 text-sm font-medium transition-colors',
-                    'hover:bg-accent hover:text-accent-foreground',
+                    'hover:text-primary bg-transparent hover:bg-transparent focus:bg-transparent focus:text-primary focus:ring-0 focus:ring-offset-0',
                     pathname === item.href &&
                       'text-accent-foreground',
               isActive
@@ -47,7 +52,7 @@ export function NavbarMenuItem({ item }: { item: NavLinkItem }) {
     <NavigationMenuItem>
       <NavigationMenuTrigger
         className={cn(
-          'text-sm font-medium transition-colors hover:text-primary bg-transparent hover:bg-transparent focus:bg-transparent focus:text-primary focus:ring-0 focus:ring-offset-0',
+          'px-3 py-2 text-sm font-medium text-muted-foreground transition-colors hover:text-primary bg-transparent hover:bg-transparent focus:bg-transparent focus:text-primary focus:ring-0 focus:ring-offset-0 ',
           isActive && 'text-primary font-semibold'
         )}
       >
@@ -57,9 +62,10 @@ export function NavbarMenuItem({ item }: { item: NavLinkItem }) {
       <NavigationMenuContent>
         <ul className="grid gap-2 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
           {item.children.map(child => (
+            
             <li key={child.href} className="row-span-3">
               <NavigationMenuLink asChild>
-                <a
+                <Link
                   href={child.href}
                   className={cn(
                     'block rounded-md px-3 py-2 text-sm transition-colors',
@@ -68,8 +74,13 @@ export function NavbarMenuItem({ item }: { item: NavLinkItem }) {
                       'text-accent-foreground'
                   )}
                 >
+                  {child.icon ?
+                    <HugeiconsIcon icon={Menu09Icon} strokeWidth={0.5} className="mr-2 size-8" />
+                  :
+                    <HugeiconsIcon icon={SecurityLockIcon} strokeWidth={0.5} className="mr-2 size-8" />
+                  }
                   {child.label}
-                </a>
+                </Link>
               </NavigationMenuLink>
             </li>
           ))}
@@ -78,3 +89,4 @@ export function NavbarMenuItem({ item }: { item: NavLinkItem }) {
     </NavigationMenuItem>
   )
 }
+

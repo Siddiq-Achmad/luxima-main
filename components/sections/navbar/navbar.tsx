@@ -23,7 +23,7 @@ export function Navbar({ children }: { children: React.ReactNode }) {
           )}>
       <div className="container flex h-20 items-center justify-between">
         <Link href="/" className="flex items-center gap-2">
-          <LoaderPinwheelIcon />
+          <LoaderPinwheelIcon className="mr-2 text-primary/80 " />
           <span className="text-xl font-mono font-semibold text-primary">
             LUXIMA.ID
           </span>

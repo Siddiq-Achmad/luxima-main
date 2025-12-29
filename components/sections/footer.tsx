@@ -1,165 +1,222 @@
-'use client'
+"use client";
 
-import Link from 'next/link'
-import { motion } from 'motion/react'
-import { cn } from '@/lib/utils'
-import { Call02Icon, Facebook01Icon, InstagramIcon, Mail02Icon, MapPinpoint02Icon, NewTwitterRectangleIcon, TiktokIcon, WhatsappBusinessIcon, YoutubeIcon } from '@hugeicons/core-free-icons'
-import { HugeiconsIcon } from '@hugeicons/react'
-import { LoaderPinwheelIcon } from '../ui/loader-pinwheel'
+import Link from "next/link";
+import { motion } from "motion/react";
+import { cn } from "@/lib/utils";
+import {
+  Call02Icon,
+  Facebook01Icon,
+  InstagramIcon,
+  Mail02Icon,
+  MapPinpoint02Icon,
+  NewTwitterRectangleIcon,
+  TiktokIcon,
+  WhatsappBusinessIcon,
+  YoutubeIcon,
+} from "@hugeicons/core-free-icons";
+import { HugeiconsIcon } from "@hugeicons/react";
+import { LoaderPinwheelIcon } from "../ui/loader-pinwheel";
 
 const Footer = () => {
-  const currentYear = new Date().getFullYear()
+  const currentYear = new Date().getFullYear();
 
   const services = [
-    'Wedding Photography',
-    'Studio Photography',
-    'Event Photography',
-    'Product Photography',
-    'Portrait Photography',
-    'Wedding Consultant',
-    'Web Development',
-    'Sistem Informasi'
-  ]
+    "Wedding Photography",
+    "Studio Photography",
+    "Event Photography",
+    "Product Photography",
+    "Portrait Photography",
+    "Wedding Consultant",
+    "Web Development",
+    "Sistem Informasi",
+  ];
 
   const quickLinks = [
-    { label: 'About Us', href: '/about' },
-    { label: 'Services', href: '/services' },
-    { label: 'Gallery', href: '/gallery' },
-    { label: 'Blog', href: '/blog' },
-    { label: 'Contact', href: '/contact' },
-  ]
+    { label: "About Us", href: "/about" },
+    { label: "Services", href: "/services" },
+    { label: "Work", href: "/work" },
+    { label: "Blog", href: "/blog" },
+    { label: "Contact", href: "/contact" },
+  ];
 
   const socialLinks = [
-    { icon: Facebook01Icon, href: 'https://facebook.com/luxima.photo', label: 'Facebook' },
-    { icon: InstagramIcon, href: 'https://instagram.com/luxima.id', label: 'Instagram' },
-    { icon: TiktokIcon, href: 'https://tiktok.com/@luxima.id', label: 'Tiktok' },
-    { icon: NewTwitterRectangleIcon, href: 'https://twitter.com/luximaid', label: 'X' },
-    { icon: YoutubeIcon, href: 'https://www.youtube.com/@luxima-id', label: 'Youtube' },
-    { icon: WhatsappBusinessIcon, href: 'https://wa.me/628990001664', label: 'Whatsapp' },
-  ]
+    {
+      icon: Facebook01Icon,
+      href: "https://facebook.com/luxima.photo",
+      label: "Facebook",
+    },
+    {
+      icon: InstagramIcon,
+      href: "https://instagram.com/luxima.id",
+      label: "Instagram",
+    },
+    {
+      icon: TiktokIcon,
+      href: "https://tiktok.com/@luxima.id",
+      label: "Tiktok",
+    },
+    {
+      icon: NewTwitterRectangleIcon,
+      href: "https://twitter.com/luximaid",
+      label: "X",
+    },
+    {
+      icon: YoutubeIcon,
+      href: "https://www.youtube.com/@luxima-id",
+      label: "Youtube",
+    },
+    {
+      icon: WhatsappBusinessIcon,
+      href: "https://wa.me/628990001664",
+      label: "Whatsapp",
+    },
+  ];
 
   return (
-    <footer className={cn('container mx-auto px-4 py-12','border-border border-b border-dashed',)}>
-      
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {/* Company Info */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-          >
-            <div className="flex items-center space-x-2 mb-4">
-              <div className="w-10 h-10 bg-transparent flex items-center justify-center">
-                {/* <span className="text-xl font-semibold text-primary-foreground">L</span> */}
-                <LoaderPinwheelIcon />
-              </div>
-              <span className="text-xl font-mono text-primary">LUXIMA.ID</span>
+    <footer
+      className={cn(
+        "container mx-auto px-4 pt-8 pb-4",
+        "border-border border-b border-dashed"
+      )}
+    >
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        {/* Company Info */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+        >
+          <div className="flex items-center gap-2 mb-4">
+            <div className="w-10 h-10 bg-transparent flex items-center justify-center">
+              {/* <span className="text-xl font-semibold text-primary-foreground">L</span> */}
+              <LoaderPinwheelIcon className="text-primary/75" />
             </div>
-            <p className="text-sm font-light tracking-tight text-muted-foreground mb-4">
-              Wedding Platform Digital & Pengembangan Bisnis Berbasis Teknologi. Creative Studio, Photography, Web Dev & Digital Marketing
-            </p>
-            <div className="space-y-2 text-sm text-muted-foreground">
-              <div className="flex items-center space-x-2">
-                {/* <MapPin className="h-4 w-4 text-primary" /> */}
-                <HugeiconsIcon icon={MapPinpoint02Icon} className="h-4 w-4 text-primary" />
-                <span>Aceh, Indonesia</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                {/* <Mail className="h-4 w-4 text-primary" /> */}
-                <HugeiconsIcon icon={Mail02Icon} className="h-4 w-4 text-primary" />
-                <span>hello@luxima.id</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                {/* <Phone className="h-4 w-4 text-primary" /> */}
-                <HugeiconsIcon icon={Call02Icon} className="h-4 w-4 text-primary" />
-                <Link href="https://wa.me/628990001664" target="_blank" rel="noopener noreferrer">
-                
+            <span className="text-xl font-mono text-primary">LUXIMA.ID</span>
+          </div>
+          <p className="text-sm font-light tracking-tight text-muted-foreground mb-4">
+            Wedding Platform Digital & Pengembangan Bisnis Berbasis Teknologi.
+            Creative Studio, Photography, Web Dev & Digital Marketing
+          </p>
+          <div className="space-y-2 text-sm text-muted-foreground">
+            <div className="flex items-center mb-2 gap-2">
+              {/* <MapPin className="h-4 w-4 text-primary" /> */}
+              <HugeiconsIcon
+                icon={MapPinpoint02Icon}
+                className="h-4 w-4 text-primary"
+              />
+              <span>Aceh, Indonesia</span>
+            </div>
+            <div className="flex items-center mb-2 gap-2">
+              {/* <Mail className="h-4 w-4 text-primary" /> */}
+              <HugeiconsIcon
+                icon={Mail02Icon}
+                className="h-4 w-4 text-primary"
+              />
+              <span>hello@luxima.id</span>
+            </div>
+            <div className="flex items-center mb-2 gap-2">
+              {/* <Phone className="h-4 w-4 text-primary" /> */}
+              <HugeiconsIcon
+                icon={Call02Icon}
+                className="h-4 w-4 text-primary"
+              />
+              <Link
+                href="https://wa.me/628990001664"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 +62 899 0001 664
-                </Link>
-              </div>
+              </Link>
             </div>
-          </motion.div>
+          </div>
+        </motion.div>
 
-          {/* Services */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-          >
-            <h3 className="text-lg font-semibold mb-4">Our Services</h3>
-            <ul className="space-y-2">
-              {services.slice(0, 6).map((service) => (
-                <li key={service}>
-                  <Link 
-                    href="/services" 
-                    className="text-sm text-muted-foreground hover:text-primary transition-colors"
-                  >
-                    {service}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </motion.div>
+        {/* Services */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.1 }}
+        >
+          <h3 className="text-lg font-light mb-4">Our Services</h3>
+          <ul className="gap-4">
+            {services.slice(0, 6).map((service) => (
+              <li key={service}>
+                <Link
+                  href="/services"
+                  className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                >
+                  {service}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </motion.div>
 
-          {/* Quick Links */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-          >
-            <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
-            <ul className="space-y-2">
-              {quickLinks.map((link) => (
-                <li key={link.href}>
-                  <Link 
-                    href={link.href} 
-                    className="text-sm text-muted-foreground hover:text-primary transition-colors"
-                  >
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </motion.div>
+        {/* Quick Links */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+        >
+          <h3 className="text-lg font-light mb-4">Quick Links</h3>
+          <ul className="gap-4">
+            {quickLinks.map((link) => (
+              <li key={link.href}>
+                <Link
+                  href={link.href}
+                  className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                >
+                  {link.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </motion.div>
 
-          {/* Newsletter & Social */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.3 }}
-          >
-            <h3 className="text-lg font-semibold mb-4">Connect With Us</h3>
-            <p className="text-sm text-muted-foreground mb-4">
-              Follow kami di social media untuk update terbaru.
-            </p>
-            <div className="flex space-x-4">
+        {/* Newsletter & Social */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+          className="relative"
+        >
+          <h3 className="text-lg font-light mb-4">Connect With Us</h3>
+          <p className="text-sm text-muted-foreground mb-4">
+            Follow kami di social media untuk update terbaru.
+          </p>
+          <div className="flex gap-4 flex-col justify-between h-max">
+            <div className="flex gap-2">
               {socialLinks.map((social) => (
                 <a
                   key={social.label}
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 bg-muted flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors"
+                  className="w-10 h-10 flex items-center justify-center text-primary bg-transparent hover:bg-primary hover:text-primary-foreground transition-colors"
                   aria-label={social.label}
                 >
                   <HugeiconsIcon icon={social.icon} />
                 </a>
               ))}
             </div>
-          </motion.div>
-        </div>
+            <div className="md:absolute bottom-0 right-0 mt-4 flex gap-2 flex-1 flex-col text-xs text-muted-foreground justify-end items-end mr-4">
+              <a href="/privacy">Privacy Policy</a>
+              <a href="/terms">Terms & Conditions</a>
+            </div>
+          </div>
+        </motion.div>
+      </div>
 
-        {/* Bottom Bar */}
-        <div className="border-t border-border mt-8 pt-8 text-center text-sm text-muted-foreground">
-          <p>&copy; {currentYear} LUXIMA.ID. All rights reserved.</p>
-        </div>
-     
+      {/* Bottom Bar */}
+      <div className="border-t border-border mt-4 pt-4 text-center text-sm text-muted-foreground">
+        <p className="text-sm text-muted-foreground"><Link href="https://luxima.id" className="text-primary tracking-widest">&copy; {" "}LUXIMA.ID </Link> {currentYear} | All rights reserved.</p>
+      </div>
     </footer>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;

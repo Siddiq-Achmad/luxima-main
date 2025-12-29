@@ -39,8 +39,8 @@ export default function Contact(): React.ReactElement {
             Kami sangat senang untuk membantu Anda. <br />
             Jangan ragu untuk menghubungi kami melalui email atau telepon.
             <ul className='mt-2 gap-2'>
-              <li className='flex gap-2 items-center'><HugeiconsIcon icon={Mail01Icon}/><a href="mailto:admin@luxima.id">admin@luxima.id</a></li>
-              <li className='flex gap-2'><HugeiconsIcon icon={Call02Icon}/> <a href="https://wa.me/628990001664">+62 899 0001 664</a></li>
+              <li className='flex gap-2 items-center'><HugeiconsIcon icon={Mail01Icon} className='h-4 w-4 text-primary'/><a href="mailto:admin@luxima.id">admin@luxima.id</a></li>
+              <li className='flex gap-2 items-center'><HugeiconsIcon icon={Call02Icon} className='h-4 w-4 text-primary'/> <a href="https://wa.me/628990001664">+62 899 0001 664</a></li>
 
             </ul>
           </div>

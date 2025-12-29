@@ -1,14 +1,31 @@
-'use client'
+"use client";
 
-import { Menu } from 'lucide-react'
-import Link from 'next/link'
-import { Sheet, SheetTrigger, SheetContent, SheetTitle, SheetFooter, SheetHeader, SheetDescription } from '@/components/ui/sheet'
-import { Button } from '@/components/ui/button'
-import { navLinks } from './nav-links'
-import { useState } from 'react'
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion'
+import { Menu } from "lucide-react";
+import Link from "next/link";
+import {
+  Sheet,
+  SheetTrigger,
+  SheetContent,
+  SheetTitle,
+  SheetFooter,
+  SheetHeader,
+  SheetDescription,
+} from "@/components/ui/sheet";
+import { Button } from "@/components/ui/button";
+import { navLinks } from "./nav-links";
+import { useState } from "react";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
+import { HugeiconsIcon } from "@hugeicons/react";
+import { SecurityLockIcon, User03Icon } from "@hugeicons/core-free-icons";
+import { useUser } from "@/hooks/useUser";
 export function NavbarMobile() {
-    const [open, setOpen] = useState(false)
+  const [open, setOpen] = useState(false);
+  const { user } = useUser();
   return (
     <div className="md:hidden">
       <Sheet>
@@ -19,10 +36,10 @@ export function NavbarMobile() {
         </SheetTrigger>
 
         <SheetContent side="right" className="flex flex-col gap-4 p-4">
-            <SheetHeader>
-            <SheetTitle className='uppercase text-center'>Menu</SheetTitle>
+          <SheetHeader>
+            <SheetTitle className="uppercase text-center">Menu</SheetTitle>
             <SheetDescription></SheetDescription>
-            </SheetHeader>
+          </SheetHeader>
           {/* <div className="flex flex-col gap-2">
             {navLinks.map(item =>
               item.children ? (
@@ -55,8 +72,10 @@ export function NavbarMobile() {
           <Accordion type="multiple" className="w-full px-2 py-2 gap-2">
             {navLinks.map((item) =>
               item.children ? (
-                <AccordionItem key={item.label} value={item.label} >
-                  <AccordionTrigger className='text-sm font-medium hover:bg-accent'>{item.label}</AccordionTrigger>
+                <AccordionItem key={item.label} value={item.label}>
+                  <AccordionTrigger className="text-sm font-medium hover:bg-accent">
+                    {item.label}
+                  </AccordionTrigger>
                   <AccordionContent>
                     <div className="flex flex-col gap-1">
                       {item.children.map((child) => (
@@ -87,14 +106,32 @@ export function NavbarMobile() {
 
           {/* Sign In (Mobile) */}
           <SheetFooter>
-          <Button asChild className="mt-auto">
+            {/* <Button asChild className="mt-auto">
             <Link href="/auth/sign-in">
               Sign In
             </Link>
-          </Button>
+          </Button> */}
+            {user ? (
+              <Link href="/dashboard" className="mx-auto w-full">
+                <Button className="w-full">
+                  <HugeiconsIcon icon={User03Icon} className="mr-2 size-4" />
+                  Dashboard
+                </Button>
+              </Link>
+            ) : (
+              <Link href="/dashboard" className="mx-auto w-full">
+                <Button className="w-full">
+                  <HugeiconsIcon
+                    icon={SecurityLockIcon}
+                    className="mr-2 size-4"
+                  />
+                  Sign In
+                </Button>
+              </Link>
+            )}
           </SheetFooter>
         </SheetContent>
       </Sheet>
     </div>
-  )
+  );
 }

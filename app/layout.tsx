@@ -3,6 +3,8 @@ import {  JetBrains_Mono, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Toaster } from "@/components/ui/sonner";
+import { baseUrl } from "@/lib/constants";
+import Script from "next/script";
 
 const jetbrainsMono = JetBrains_Mono({subsets:['latin'],variable:'--font-mono'});
 
@@ -22,6 +24,7 @@ export const metadata: Metadata = {
   },
   description:
     "LUXIMA.ID | Wedding Industry, Photography, Pengembangan Teknologi & Bisnis Digital. Mulai Bangun Bisnis Wedding yang Lebih Profesional",
+  metadataBase: baseUrl,
 };
 
 export default function RootLayout({
@@ -46,6 +49,7 @@ export default function RootLayout({
         <Toaster position="top-right"/>
         </ThemeProvider>
         </div>
+        <Script defer src="https://stats.luxima.id/script.js" data-website-id="a8f6e22a-2514-4113-ad2b-8d1dc7f7a8a4"></Script>
       </body>
     </html>
   );

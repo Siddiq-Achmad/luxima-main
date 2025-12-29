@@ -6,14 +6,14 @@ export function createMetadata(override: Metadata): Metadata {
     openGraph: {
       title: override.title ?? undefined,
       description: override.description ?? undefined,
-      url: 'https://saas-landing.techwithanirudh.com',
+      url: 'https://luxima.id',
       images: '/banner.png',
       siteName: 'SaasCN',
       ...override.openGraph,
     },
     twitter: {
       card: 'summary_large_image',
-      creator: '@AnirudhWith',
+      creator: '@luxima.id',
       title: override.title ?? undefined,
       description: override.description ?? undefined,
       images: '/banner.png',

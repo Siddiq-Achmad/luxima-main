@@ -71,7 +71,7 @@ export default function Header() {
       <div className="container flex h-20 items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2 ml-2">
-          <LoaderPinwheelIcon />
+          <LoaderPinwheelIcon className="mr-2 text-primary/40" />
           <span className="text-xl font-mono font-semibold text-primary">
             LUXIMA.ID
           </span>

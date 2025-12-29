@@ -65,7 +65,7 @@ export default function TeamSection({ members }: { members: Member[] }) {
                       className="group-hover:text-primary-600 dark:group-hover:text-primary-400 inline-block translate-y-8 text-sm tracking-wide opacity-0 transition-all duration-500 hover:underline group-hover:translate-y-0 group-hover:opacity-100"
                     >
                       {" "}
-                      <HugeiconsIcon icon={InstagramIcon} />
+                      <HugeiconsIcon icon={InstagramIcon} className="text-primary " />
                     </Link>
                   </div>
                 </div>
