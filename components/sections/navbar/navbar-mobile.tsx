@@ -111,15 +111,16 @@ export function NavbarMobile() {
               Sign In
             </Link>
           </Button> */}
+          <a href={process.env.NEXT_PUBLIC_ADMIN_URL} className="hidden md:block">
             {user ? (
-              <Link href="/dashboard" className="mx-auto w-full">
+              
                 <Button className="w-full">
                   <HugeiconsIcon icon={User03Icon} className="mr-2 size-4" />
                   Dashboard
                 </Button>
-              </Link>
+             
             ) : (
-              <Link href="/dashboard" className="mx-auto w-full">
+              
                 <Button className="w-full">
                   <HugeiconsIcon
                     icon={SecurityLockIcon}
@@ -127,8 +128,9 @@ export function NavbarMobile() {
                   />
                   Sign In
                 </Button>
-              </Link>
+             
             )}
+            </a>
           </SheetFooter>
         </SheetContent>
       </Sheet>

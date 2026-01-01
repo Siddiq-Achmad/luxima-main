@@ -2,23 +2,17 @@
 
 ## Deskripsi Singkat
 
-
-
 Website utama LUXIMA.ID, sebuah startup yang bergerak di bidang Wedding Industry, Photography, serta Pengembangan Teknologi & Bisnis Digital.
 
 Project ini dibangun sebagai fondasi untuk:
-
 Company profile resmi LUXIMA.ID
-
 Website marketing dengan pendekatan conversion-oriented
-
 Platform Wedding Listing & Vendor Directory
-
 Media edukasi & akuisisi traffic melalui Blog (SEO-driven)
-
 Fondasi pengembangan SaaS & Vendor Ecosystem di masa depan
 
 Website utama **Luxima** yang dibangun menggunakan **Next.js 16 (App Router)** dengan fokus pada performa, skalabilitas, dan UI modern. Project ini menggunakan **Tailwind CSS v4**, **shadcn/ui**, serta terintegrasi dengan **Supabase** sebagai backend service.
+
 ---
 
 ##🎯 Fokus Pengembangan
@@ -114,14 +108,13 @@ bun install
 Buat file `.env` berdasarkan kebutuhan:
 
 ```env
-NEXT_PUBLIC_APP_URL=http://localhost:3000
+NEXT_PUBLIC_APP_URL=http://localhost:3000 
+NEXT_PUBLIC_AUTH_URL=http://localhost:3001 
+NEXT_PUBLIC_ADMIN_URL=http://localhost:3002 
 NEXT_PUBLIC_SUPABASE_URL=
 NEXT_PUBLIC_SUPABASE_ANON_KEY=
-SUPABASE_SERVICE_ROLE_KEY=
 DATABASE_URL=
 RESEND_API_KEY=
-BETTER_AUTH_URL=http://localhost:3000
-BETTER_AUTH_SECRET=
 NEXT_PUBLIC_UMAMI_URL=
 NEXT_PUBLIC_UMAMI_WEBSITE_ID=
 GOOGLE_CLIENT_ID=
