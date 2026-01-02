@@ -53,7 +53,7 @@ export async function proxy(req: NextRequest) {
   //   return NextResponse.redirect(redirectUrl);
   // }
 
-  if (!user) {
+  if (!user ) {
     // ✅ Gunakan host header agar dapat hostname aktual
     const protocol = req.headers.get('x-forwarded-proto') ?? 'https';
     const host = req.headers.get('host'); // ex: app.luxima.id
@@ -70,10 +70,10 @@ export async function proxy(req: NextRequest) {
 
 export const config = {
   matcher: [
-    "/docs",
-    "/docs/:path*",
-    "/dashboard",
-    "/dashboard/:path*",
-    // "/((?!_next/static|_next/image|favicon.ico|.*\\.(?:svg|png|jpg|jpeg|gif|webp)$).*)",
+    // "/docs",
+    // "/docs/:path*",
+    // "/dashboard",
+    // "/dashboard/:path*",
+    "/((?!_next/static|_next/image|favicon.ico|.*\\.(?:svg|png|jpg|jpeg|gif|webp)$).*)",
   ],
 };

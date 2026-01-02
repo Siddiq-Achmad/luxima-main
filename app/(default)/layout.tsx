@@ -20,6 +20,7 @@ const Layout = ({ children }: { children: ReactNode }) => {
         {/* <Header /> */}
         <div className="relative mt-20">{children}</div>
         <Footer />
+        
       </main>
     </>
   );

@@ -1,26 +1,32 @@
 {
   "compilerOptions": {
-    "target": "ES2017",
+    "baseUrl": ".",
+    "target": "ESNext",
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
+    "forceConsistentCasingInFileNames": true,
     "noEmit": true,
     "esModuleInterop": true,
     "module": "esnext",
     "moduleResolution": "bundler",
     "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
     "isolatedModules": true,
     "jsx": "react-jsx",
     "incremental": true,
     "plugins": [
       {
-        "name": "next"
+        "name": "next",
       }
     ],
     "paths": {
-      "@/*": ["./*"]
-    }
+      "@/*": ["./*"],
+      "fumadocs-mdx:collections/*": [".source/*"]
+    },
+    "ignoreDeprecations": "5.0",
+    "strictNullChecks": true
   },
   "include": [
     "next-env.d.ts",
@@ -29,6 +35,7 @@
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts",
     "**/*.mts"
-  ],
+, "next.config.mjs"  ],
   "exclude": ["node_modules"]
 }
+

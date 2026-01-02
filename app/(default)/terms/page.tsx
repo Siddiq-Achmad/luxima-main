@@ -5,7 +5,7 @@ import { createMetadata } from "@/lib/metadata";
 import type { Metadata } from "next";
 import Link from "next/link";
 
-const LAST_UPDATED = "March 2, 2025";
+const LAST_UPDATED ="January 01, 2026";
 
 export default function TermsOfService() {
   return (
@@ -22,6 +22,9 @@ export default function TermsOfService() {
           <h1 className="mb-2 font-semibold text-3xl leading-tight tracking-tighter md:text-4xl">
             Terms of Service
           </h1>
+          <p className="text-muted-foreground text-lg">
+            Syarat dan Ketentuan Vendor Luxima SaaS Wedding Platform
+          </p>
           <p className="text-muted-foreground text-sm">
             Last updated: {LAST_UPDATED}
           </p>

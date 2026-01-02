@@ -1,10 +1,41 @@
 import type { NextConfig } from "next";
+import { createMDX } from 'fumadocs-mdx/next';
 
-const nextConfig: NextConfig = {
-  /* config options here */
-  images: {
-    remotePatterns: [
-      {
+import { fileURLToPath } from 'node:url'
+import bundleAnalyzer from '@next/bundle-analyzer'
+
+
+async function createNextConfig(): Promise<NextConfig> {
+  const { createJiti } = await import('jiti')
+  const jiti = createJiti(fileURLToPath(import.meta.url))
+
+  await jiti.import('./env')
+
+  const nextConfig: NextConfig = {
+    reactStrictMode: true,
+    poweredByHeader: false,
+    productionBrowserSourceMaps: process.env.SOURCE_MAPS === 'true',
+    devIndicators: false,
+    logging: {
+      fetches: {
+        fullUrl: true,
+      },
+    },
+    typescript: {
+      ignoreBuildErrors: true,
+    },
+    serverExternalPackages: [
+      'ts-morph',
+      'typescript',
+      'oxc-transform',
+      'twoslash',
+      'twoslash-protocol',
+      'shiki',
+      '@takumi-rs/image-response',
+    ],
+    images: {
+      remotePatterns: [
+        {
         protocol: 'https',
         hostname: 'images.unsplash.com',
         port: '',
@@ -28,9 +59,43 @@ const nextConfig: NextConfig = {
         port: '',
         pathname: '/**',
       },
+      {
+          protocol: 'https',
+          hostname: 'avatars.githubusercontent.com',
+          port: '',
+        },
+        {
+          protocol: 'https',
+          hostname: 'fumadocs.dev',
+          port: '',
+        },
+      ],
+    },
+    async rewrites() {
+      return [
+        {
+          source: '/docs/:path*.mdx',
+          destination: '/llms.mdx/:path*',
+        },
+      ]
+    },
+  }
 
-    ],
-  },
-};
+  return nextConfig
+}
 
-export default nextConfig;
+const bundleAnalyzerPlugin = bundleAnalyzer({
+  enabled: process.env.ANALYZE === 'true',
+})
+
+const mdxPlugin = createMDX()
+
+const NextApp = async () => {
+  const nextConfig = await createNextConfig()
+  const plugins = [bundleAnalyzerPlugin, mdxPlugin]
+  return plugins.reduce((config, plugin) => plugin(config), nextConfig)
+}
+
+export default NextApp
+
+

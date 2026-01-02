@@ -1,4 +1,6 @@
 import type { Metadata } from 'next/types';
+import { title } from '@/lib/layout.shared'
+import { Page } from 'fumadocs-core/source';
 
 export function createMetadata(override: Metadata): Metadata {
   return {
@@ -8,7 +10,7 @@ export function createMetadata(override: Metadata): Metadata {
       description: override.description ?? undefined,
       url: 'https://luxima.id',
       images: '/banner.png',
-      siteName: 'SaasCN',
+      siteName: title,
       ...override.openGraph,
     },
     twitter: {
@@ -28,3 +30,16 @@ export function createMetadata(override: Metadata): Metadata {
     },
   };
 }
+
+export function getPageImage(page: Page) {
+  const segments = [...page.slugs, 'image.webp']
+  return {
+    segments,
+    url: `/og/${segments.join('/')}`,
+  }
+}
+
+export const baseUrl =
+  process.env.NODE_ENV === 'development' || !process.env.NEXT_PUBLIC_BASE_URL
+    ? new URL('http://localhost:3000')
+    : new URL(process.env.NEXT_PUBLIC_BASE_URL)

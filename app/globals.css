@@ -2,6 +2,9 @@
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
 
+@import 'fumadocs-ui/css/neutral.css';
+@import 'fumadocs-ui/css/preset.css';
+
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
@@ -197,6 +200,16 @@
   .divide-border {
     @apply divide-border/70 dark:divide-border;
   }
+
+  @media print {
+  #nd-docs-layout {
+    --fd-sidebar-width: 0px !important;
+  }
+  #nd-sidebar {
+    display: none;
+  }
+}
+
 }
 
 ::view-transition-old(root), ::view-transition-new(root) {
