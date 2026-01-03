@@ -212,7 +212,7 @@ const Footer = () => {
       </div>
 
       {/* Bottom Bar */}
-      <div className="border-t border-border mt-4 pt-4 text-center text-sm text-muted-foreground">
+      <div className="border-t border-border mt-4 pt-4 text-center text-sm text-muted-foreground border-dashed">
         <p className="text-sm text-muted-foreground"><Link href="https://luxima.id" className="text-primary tracking-widest">&copy; {" "}LUXIMA.ID </Link> {currentYear} | All rights reserved.</p>
       </div>
     </footer>

@@ -12,7 +12,7 @@ import {
   SheetDescription,
 } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
-import { navLinks } from "./nav-links";
+import { navLinks } from '@/lib/constants/nav-links'
 import { useState } from "react";
 import {
   Accordion,

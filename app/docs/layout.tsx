@@ -1,5 +1,5 @@
 import { DocsLayout } from 'fumadocs-ui/layouts/notebook'
-import { baseOptions, linkItems, logo, title } from '@/lib/layout.shared'
+import { baseOptions, linkItems} from '@/lib/layout.shared'
 import { source } from '@/lib/source'
 import 'katex/dist/katex.min.css'
 import type { CSSProperties } from 'react'
@@ -8,27 +8,30 @@ import {
   AISearchPanel,
   AISearchTrigger,
 } from '@/components/fumadocs/ai/search'
+import Logo from '@/components/logo'
 
 const LEADING_DASHES = /^-+/
 const TRAILING_DASHES = /-+$/
 
 export default function Layout({ children }: LayoutProps<'/docs'>) {
-  const base = baseOptions()
+  const { nav, ...base } = baseOptions();
+
 
   return (
     <DocsLayout
       {...base}
       links={linkItems.filter((item) => item.type === 'icon')}
       nav={{
-        ...base.nav,
+        ...nav,
         mode: 'top',
         title: (
           <>
-            {logo}
-            <span className='font-mono max-md:hidden'>{title}</span>
+            <Logo />
           </>
         ),
       }}
+      tabMode='navbar'
+      tree={source.pageTree}
       sidebar={{
         collapsible: false,
         tabs: {
@@ -60,8 +63,7 @@ export default function Layout({ children }: LayoutProps<'/docs'>) {
           },
         },
       }}
-      tabMode='navbar'
-      tree={source.pageTree}
+      
     >
       {children}
 

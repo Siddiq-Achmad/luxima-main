@@ -1,92 +1,107 @@
-'use client'
-import { DynamicIcon } from 'lucide-react/dynamic';
-import Link from 'next/link'
-import { usePathname } from 'next/navigation'
+"use client";
+import { DynamicIcon } from "lucide-react/dynamic";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import {
   NavigationMenuItem,
   NavigationMenuTrigger,
   NavigationMenuContent,
   NavigationMenuLink,
-} from '@/components/ui/navigation-menu'
-import { cn } from '@/lib/utils'
-import type { NavLinkItem } from './nav-links'
-import { HugeiconsIcon } from '@hugeicons/react';
-import {  Menu09Icon, SecurityLockIcon } from '@hugeicons/core-free-icons'
-
-
-
+} from "@/components/ui/navigation-menu";
+import { cn } from "@/lib/utils";
+import type { NavLinkItem } from '@/lib/constants/nav-links'
+import { HugeiconsIcon } from "@hugeicons/react";
+import { Menu09Icon, SecurityLockIcon } from "@hugeicons/core-free-icons";
+import {
+  NavbarMenu,
+  NavbarMenuContent,
+  NavbarMenuLink,
+  NavbarMenuTrigger,
+} from "fumadocs-ui/layouts/home/navbar";
 
 export function NavbarMenuItem({ item }: { item: NavLinkItem }) {
-  const pathname = usePathname()
+  const pathname = usePathname();
 
   const isActive =
     pathname === item.href ||
-    item.children?.some(child => pathname === child.href)
+    item.children?.some((child) => pathname === child.href);
 
   // ✅ Simple Link
   if (!item.children) {
     return (
       <NavigationMenuItem>
-        <NavigationMenuLink asChild >
+        <NavigationMenuLink asChild>
           <Link
             href={item.href}
             className={cn(
-              'block px-3 py-2 text-sm font-medium transition-colors',
-                    'hover:text-primary bg-transparent hover:bg-transparent focus:bg-transparent focus:text-primary focus:ring-0 focus:ring-offset-0',
-                    pathname === item.href &&
-                      'text-accent-foreground',
+              "block px-3 py-2 text-sm font-medium transition-colors",
+              "hover:text-primary bg-transparent hover:bg-transparent focus:bg-transparent focus:text-primary focus:ring-0 focus:ring-offset-0",
+              pathname === item.href && "text-accent-foreground",
               isActive
-                ? 'text-primary font-semibold'
-                : 'text-muted-foreground font-medium'
+                ? "text-primary font-semibold"
+                : "text-muted-foreground font-medium"
             )}
           >
             {item.label}
           </Link>
         </NavigationMenuLink>
       </NavigationMenuItem>
-    )
+    );
   }
 
   // ✅ Dropdown (Trigger + Content)
   return (
-    <NavigationMenuItem>
-      <NavigationMenuTrigger
-        className={cn(
-          'px-3 py-2 text-sm font-medium text-muted-foreground transition-colors hover:text-primary bg-transparent hover:bg-transparent focus:bg-transparent focus:text-primary focus:ring-0 focus:ring-offset-0 ',
-          isActive && 'text-primary font-semibold'
-        )}
-      >
-        {item.label}
-      </NavigationMenuTrigger>
+    <>
+      <NavigationMenuItem>
+        <NavigationMenuTrigger
+          className={cn(
+            "px-3 py-2 text-sm font-medium text-muted-foreground transition-colors hover:text-primary bg-transparent hover:bg-transparent focus:bg-transparent focus:text-primary focus:ring-0 focus:ring-offset-0 ",
+            isActive && "text-primary font-semibold"
+          )}
+        >
+          {item.label}
+        </NavigationMenuTrigger>
 
-      <NavigationMenuContent>
-        <ul className="grid gap-2 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
-          {item.children.map(child => (
-            
-            <li key={child.href} className="row-span-3">
-              <NavigationMenuLink asChild>
-                <Link
-                  href={child.href}
-                  className={cn(
-                    'block rounded-md px-3 py-2 text-sm transition-colors',
-                    'hover:bg-accent hover:text-accent-foreground',
-                    pathname === child.href &&
-                      'text-accent-foreground'
-                  )}
-                >
-                  {child.icon ?
-                    <HugeiconsIcon icon={Menu09Icon} strokeWidth={0.5} className="mr-2 size-8" />
-                  :
-                    <HugeiconsIcon icon={SecurityLockIcon} strokeWidth={0.5} className="mr-2 size-8" />
-                  }
-                  {child.label}
-                </Link>
-              </NavigationMenuLink>
-            </li>
-          ))}
-        </ul>
-      </NavigationMenuContent>
-    </NavigationMenuItem>
-  )
+        <NavigationMenuContent>
+          <ul className="grid gap-2 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
+            {item.children.map((child) => (
+              <li key={child.href} className="row-span-3">
+                <NavigationMenuLink asChild>
+                  <Link
+                    href={child.href}
+                    className={cn(
+                      "block rounded-md px-3 py-2 text-sm transition-colors",
+                      "hover:bg-accent hover:text-accent-foreground",
+                      pathname === child.href && "text-accent-foreground"
+                    )}
+                  >
+                    {child.icon ? (
+                      <HugeiconsIcon
+                        icon={Menu09Icon}
+                        strokeWidth={0.5}
+                        className="mr-2 size-8"
+                      />
+                    ) : (
+                      <HugeiconsIcon
+                        icon={SecurityLockIcon}
+                        strokeWidth={0.5}
+                        className="mr-2 size-8"
+                      />
+                    )}
+                    {child.label}
+                  </Link>
+                </NavigationMenuLink>
+              </li>
+            ))}
+          </ul>
+        </NavigationMenuContent>
+      </NavigationMenuItem>
+      <NavbarMenu>
+        <NavbarMenuTrigger>Docs</NavbarMenuTrigger>
+        <NavbarMenuContent>
+          <NavbarMenuLink href="/docs">Documentations</NavbarMenuLink>
+        </NavbarMenuContent>
+      </NavbarMenu>
+    </>
+  );
 }
-

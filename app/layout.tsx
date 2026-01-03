@@ -45,7 +45,7 @@ export default function RootLayout({
       <body
         className={`${PlusJakartaSans.variable} ${jetbrainsMono.variable} antialiased `}
       >
-        <div className="relative flex min-h-screen flex-col">
+        <div className="flex flex-col min-h-screen">
           <ThemeProvider
             attribute="class"
             defaultTheme="dark"
@@ -53,7 +53,10 @@ export default function RootLayout({
             disableTransitionOnChange
           >
             <RootProvider>
-              {children}</RootProvider>
+              
+              {children}
+              
+              </RootProvider>
 
             <Toaster position="top-right" />
           </ThemeProvider>
